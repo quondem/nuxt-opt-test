@@ -1,18 +1,27 @@
 <template>
 	<form
-		@submit.prevent
+		@submit="onSubmit"
 		class="form"
 	>
 		<div class="form__inputs">
 			<UiInput
+				v-model="number"
+				v-bind="numberAttrs"
+				:error="errors?.number"
 				id="number"
 				label="Номер автомобиля"
 			/>
 			<UiInput
+				v-model="region"
+				v-bind="regionAttrs"
+				:error="errors?.region"
 				id="region"
 				label="Регион"
 			/>
 			<UiInput
+				v-model="registration"
+				v-bind="registrationAttrs"
+				:error="errors?.registration"
 				id="registration"
 				label="Свидетельство о регистрации ТС"
 			/>
@@ -23,7 +32,10 @@
 				type="submit"
 			>
 				<span>Проверить штрафы</span>
-				<NuxtImg src="/images/fines-button.svg" />
+				<NuxtImg
+					class="form__button-fines"
+					src="/images/fines-button.svg"
+				/>
 			</UiButton>
 			<UiButton
 				@click.prevent="showVideo"
@@ -31,11 +43,11 @@
 				type="submit"
 			>
 				<NuxtImg
+					class="form__button-youtube"
 					src="/images/youtube-logo.svg"
 					alt="youtube"
 				/>
-				<span>О сервисе</span>
-				<span class="form__button-time">(1 мин. 20 сек)</span>
+				<span>О сервисе <span class="form__button-time">(1 мин. 20 сек)</span></span>
 			</UiButton>
 		</div>
 		<p class="form__terms">Нажимая «Проверить штрафы» вы соглашаетесь с политикой обработки персональных данных и принимаете оферту</p>
@@ -48,6 +60,27 @@
 	const showVideo = () => {
 		new Fancybox([{ src: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }]);
 	};
+
+	import * as yup from "yup";
+	import { toTypedSchema } from "@vee-validate/yup";
+
+	import { useForm } from "vee-validate";
+	const validationSchema = toTypedSchema(
+		yup.object({
+			number: yup.string().required("Номер автомобиля обязателен"),
+			region: yup.string().required("Регион обязателен"),
+			registration: yup.string().required("Свидетельство обязателено"),
+		})
+	);
+	const { values, errors, defineField, handleSubmit, handleReset } = useForm({ validationSchema });
+	const [number, numberAttrs] = defineField("number");
+	const [region, regionAttrs] = defineField("region");
+	const [registration, registrationAttrs] = defineField("registration");
+
+	const onSubmit = handleSubmit(values => {
+		alert(JSON.stringify(values, null, 2));
+		handleReset();
+	});
 </script>
 
 <style scoped lang="scss">
@@ -66,6 +99,7 @@
 				border: 1px solid #0584fe;
 				gap: 5px;
 				color: black;
+				line-height: 1.1;
 				&:hover {
 					background-color: hsl(210, 80%, 91%);
 				}
@@ -73,6 +107,12 @@
 					background-color: hsl(210, 78%, 76%);
 					border: 1px solid hsl(210, 78%, 76%);
 				}
+			}
+			&-youtube {
+				width: 2.0625rem;
+			}
+			&-fines {
+				width: 0.875rem;
 			}
 		}
 		&__inputs {

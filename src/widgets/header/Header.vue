@@ -20,7 +20,7 @@
 							>Вход</NuxtLink
 						>
 						<NuxtLink to="/register">
-							<UiButton class="header__button">Регистрация</UiButton>
+							<UiButton class="header__button"><span>Регистрация</span></UiButton>
 						</NuxtLink>
 					</div>
 				</div>
@@ -40,6 +40,7 @@
 <style scoped lang="scss">
 	.header {
 		position: fixed;
+		z-index: 10;
 		width: 100%;
 		height: 3.75rem;
 		background: linear-gradient(90deg, #000 30%, #1c2734 73%);
@@ -94,6 +95,7 @@
 		&__button {
 			padding: 0.5625rem 1.125rem;
 			font-size: 0.9375rem;
+			height: 2.3125rem;
 		}
 	}
 </style>

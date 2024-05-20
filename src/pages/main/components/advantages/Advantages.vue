@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-	import Advantages from "~/pages/main/composables/advantages.cards";
+	import Advantages from "~/pages/main/composables/advantages.data";
 </script>
 
 <style scoped lang="scss">

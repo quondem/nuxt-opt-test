@@ -17,7 +17,7 @@
 
 <style scoped lang="scss">
 	.card {
-		border: 1px solid #eeeff1;
+		border: 1px solid var(--border-color);
 		border-radius: 0.625rem;
 		background-color: #fbfcfd;
 		padding: 0 1.25rem;

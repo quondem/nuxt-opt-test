@@ -1,8 +1,5 @@
 <template>
 	<PagesFines />
 	<PagesAdvantages />
+	<PagesDocuments />
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>
