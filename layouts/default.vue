@@ -1,8 +1,14 @@
 <template>
-	<Header />
-	<slot />
+	<div class="layout">
+		<WidgetsHeader />
+		<div class="content">
+			<slot />
+		</div>
+	</div>
 </template>
 
-<script setup lang="ts"></script>
-
-<style lang="scss"></style>
+<style lang="scss">
+	.content {
+		padding-top: 3.75rem;
+	}
+</style>

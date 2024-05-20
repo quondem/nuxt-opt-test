@@ -3,10 +3,14 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 
 	srcDir: "src",
-	components: [{ path: "@widgets", pathPrefix: false }],
+	components: [
+		{ path: "@widgets", prefix: "Widgets", pathPrefix: false },
+		{ path: "@ui", prefix: "Ui", pathPrefix: false },
+		{ path: "@pages", prefix: "Pages", pathPrefix: false },
+	],
 
 	css: ["@assets/styles/style.scss"],
-	alias: { "@widgets": "~/widgets", "@pages": "~/shared/pages", "@ui": "~/shared/ui", "@assets": "~/shared/assets" },
+	alias: { "@widgets": "~/widgets", "@pages": "~/pages", "@ui": "~/shared/ui", "@assets": "~/shared/assets" },
 	modules: [
 		[
 			"@nuxtjs/google-fonts",

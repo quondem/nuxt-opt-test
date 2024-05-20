@@ -1,7 +1,3 @@
 <template>
-	<div></div>
+	<PagesMain />
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>
