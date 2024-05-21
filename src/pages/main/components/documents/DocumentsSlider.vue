@@ -83,7 +83,8 @@
 			width: 100%;
 		}
 	}
-	.f-button {
+	.f-button.is-prev,
+	.f-button.is-next {
 		width: 40px;
 		height: 80px;
 		& svg {

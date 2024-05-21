@@ -26,6 +26,13 @@
 		// justify-content: space-between;
 		height: 9.4375rem;
 		gap: 0.9375rem;
+		&__img {
+			width: 100%;
+			max-width: 3.6875rem;
+			& img {
+				width: 100%;
+			}
+		}
 		&__content {
 			display: flex;
 			flex-direction: column;

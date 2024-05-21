@@ -13,7 +13,6 @@
 <style scoped lang="scss">
 	.documents {
 		margin-top: 5.3125rem;
-		margin-bottom: 100px;
 		&__title {
 			margin-bottom: 2.5rem;
 			text-align: center;

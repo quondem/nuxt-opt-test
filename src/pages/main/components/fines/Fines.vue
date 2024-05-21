@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="fines__wrapper">
 				<div class="fines__content">
-					<h2 class="fines__title">Проверьте штрафы и зарегестрируйтесь в 1 клик</h2>
+					<h2 class="fines__title title-main">Проверьте штрафы и зарегестрируйтесь в 1 клик</h2>
 					<PagesFinesForm />
 				</div>
 
@@ -23,6 +23,9 @@
 <style scoped lang="scss">
 	.fines {
 		margin-top: 4.9375rem;
+		@media (max-width: 600px) {
+			margin-top: 2rem;
+		}
 		&__wrapper {
 			display: flex;
 			justify-content: space-between;
@@ -31,11 +34,6 @@
 				flex-direction: column;
 				align-items: center;
 			}
-		}
-		&__title {
-			font-weight: 700;
-			font-size: clamp(1.875rem, 5vw, 2.5625rem);
-			line-height: 1.2;
 		}
 		&__content {
 			display: flex;

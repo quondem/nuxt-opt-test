@@ -22,6 +22,10 @@ body {
 	margin: 0 auto;
 }
 
+.text-center {
+	text-align: center;
+}
+
 button {
 	padding: 0;
 	border: none;
@@ -33,4 +37,10 @@ button {
 	font-weight: 700;
 	font-size: clamp(1.625rem, 4vw, 2.125rem);
 	line-height: clamp(2.1875rem, 4vw, 2.5625rem);
+}
+
+.title-main {
+	font-weight: 700;
+	font-size: clamp(1.875rem, 5vw, 2.5625rem);
+	line-height: clamp(2.5rem, 5vw, 3.0625rem);
 }

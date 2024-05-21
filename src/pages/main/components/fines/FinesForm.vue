@@ -78,7 +78,7 @@
 	const [registration, registrationAttrs] = defineField("registration");
 
 	const onSubmit = handleSubmit(values => {
-		alert(JSON.stringify(values, null, 2));
+		alert("Данные были отправлены");
 		handleReset();
 	});
 </script>

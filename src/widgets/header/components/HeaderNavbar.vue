@@ -1,10 +1,20 @@
 <template>
-	<div class="navbar">
-		<NuxtLink to="/tariffs">Тарифы</NuxtLink>
-		<NuxtLink to="/contacts">Контакты</NuxtLink>
-	</div>
+	<nav class="navbar">
+		<NuxtLink
+			@click="emit('click')"
+			to="/tariffs"
+			>Тарифы</NuxtLink
+		>
+		<NuxtLink
+			@click="emit('click')"
+			to="/contacts"
+			>Контакты</NuxtLink
+		>
+	</nav>
 </template>
-
+<script setup lang="ts">
+	const emit = defineEmits(["click"]);
+</script>
 <style lang="scss">
 	.navbar {
 		margin-right: auto;

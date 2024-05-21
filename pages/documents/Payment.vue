@@ -1,7 +1,7 @@
 <template>
-	<h1 class="text-center title-main">Контакты</h1>
+	<PagesPayment />
 </template>
 <script setup lang="ts">
 	definePageMeta({ layout: "bread-crumbs" });
-	useSeoMeta({ title: "Контакты" });
+	useSeoMeta({ title: "Информация об оплате" });
 </script>

@@ -7,19 +7,23 @@
 					class="header__info"
 					:class="{ open: isOpen }"
 				>
-					<WidgetsHeaderNavbar />
+					<WidgetsHeaderNavbar @click="isOpen = false" />
 					<div class="header__side">
-						<a
+						<NuxtLink
 							class="header__phone"
 							href="tel:+74951184422"
-							>+7 495 118-44-22</a
+							>+7 495 118-44-22</NuxtLink
 						>
 						<NuxtLink
+							@click="isOpen = false"
 							to="/login"
 							class="header__login"
 							>Вход</NuxtLink
 						>
-						<NuxtLink to="/register">
+						<NuxtLink
+							@click="isOpen = false"
+							to="/register"
+						>
 							<UiButton class="header__button"><span>Регистрация</span></UiButton>
 						</NuxtLink>
 					</div>
