@@ -1,1 +1,0 @@
-import{_ as o}from"./CPyp3Ebb.js";import{_ as s,c as a,b as c,a as n,I as r,o as _}from"./BiabIrff.js";import"./D3zS0vTq.js";import"./Dzn1yC1Q.js";import"./BZ0OJ9F1.js";const d={},i={class:"layout"},l={class:"content"};function m(e,p){const t=o;return _(),a("div",i,[c(t),n("div",l,[r(e.$slots,"default")])])}const k=s(d,[["render",m]]);export{k as default};
