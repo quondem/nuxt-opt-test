@@ -30,4 +30,9 @@ export default defineNuxtConfig({
 		pages: "../pages",
 		layouts: "../layouts",
 	},
+	vite: {
+		optimizeDeps: {
+			exclude: ["@fancyapps/ui"],
+		},
+	},
 });
