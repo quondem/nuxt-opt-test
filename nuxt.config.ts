@@ -21,6 +21,7 @@ export default defineNuxtConfig({
 			},
 		],
 		"@nuxt/image",
+		"@vee-validate/nuxt",
 	],
 
 	dir: {
@@ -30,9 +31,12 @@ export default defineNuxtConfig({
 		pages: "../pages",
 		layouts: "../layouts",
 	},
-	vite: {
-		optimizeDeps: {
-			exclude: ["@fancyapps/ui"],
-		},
+	build: {
+		transpile: ["@fancyapps/ui"],
 	},
+	// vite: {
+	// 	optimizeDeps: {
+	// 		exclude: ["@fancyapps/ui"],
+	// 	},
+	// },
 });
