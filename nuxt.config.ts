@@ -31,12 +31,7 @@ export default defineNuxtConfig({
 		pages: "../pages",
 		layouts: "../layouts",
 	},
-	// build: {
-	// 	transpile: ["@fancyapps/ui"],
-	// },
-	// vite: {
-	// 	optimizeDeps: {
-	// 		exclude: ["@fancyapps/ui"],
-	// 	},
-	// },
+	app: {
+		baseURL: "/nuxt-opt-test/",
+	},
 });
