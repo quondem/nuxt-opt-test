@@ -31,5 +31,4 @@ export default defineNuxtConfig({
 		pages: "../pages",
 		layouts: "../layouts",
 	},
-	ssr: false,
 });
