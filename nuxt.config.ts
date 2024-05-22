@@ -32,5 +32,7 @@ export default defineNuxtConfig({
 		layouts: "../layouts",
 	},
 
-	ssr: false,
+	app: {
+		baseURL: "/nuxt-opt-test/",
+	},
 });
